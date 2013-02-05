@@ -1,0 +1,59 @@
+-
+    name  : "Alakazam"
+    kind  : "monster"
+    stage : 2
+    from  : "Kadabra"
+    hp    : 80
+    type  : "pc"
+    power :
+        powername : "Damage Swap"
+        desc : "As often as you like during your turn (before your attack), you may move 1 damage counter from 1 of your Pokemon to another as long as you don't Knock Out that pokemon. This power can't be used if Alakazam is Asleep, Confused or Paralyzed."
+    movea :
+        name : "Confuse Ray"
+        damage : 30
+        cost : ["pc","pc","pc"]
+        desc : "Flip a coin.  If heads, the Defending Pokemon is now Confused."
+    moveb : false
+    weak  : ["pc"]
+    resist: false
+    retr  : ["cs","cs","cs"]
+    quote : "Its brain can outperform a supercomputer.Its intellegence quotient is said to be 5000"
+    level : 42
+    number: 65
+    desc  : "Psi Pokemon"
+    ilus  : "Ken Sugimori"
+    lbs   : 106
+    ft    : 4
+    in    : 11
+    cardno: 1
+-
+    name  : "Charizard"
+    kind  : "monster"
+    stage : 2
+    from  : "Charmeleon"
+    hp    : 120
+    type  : "fe"
+    power :
+        powername : "Energy Burn"
+        desc : "As often as you like during your turn (before your attack), you may turn all Energy attached to Charizard into Fire Energy for the rest of the turn. This power can't be used if Alakazam is Asleep, Confused or Paralyzed."
+    movea :
+        name : "Fire Spin"
+        damage : 100
+        cost : ["fe","fe","fe","fe"]
+        desc : "Discard 2 Energy cards attached to Charizard in order to use this attack"
+    moveb : false
+    weak  : ["wr"]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["cs","cs","cs"]
+    quote : "Spits fire that is hot enough to melt boulders.  KNown to unintentionally cuase forest fires."
+    level : 76
+    number: 6
+    desc  : "Flame Pokemon"
+    ilus  : "Mitsuhiro Arita"
+    lbs   : 200
+    ft    : 5
+    in    : 7
+    cardno: 4
+
