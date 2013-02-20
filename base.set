@@ -27,6 +27,58 @@
     ft    : 4
     in    : 11
 -
+    cardno: 3
+    name  : "Chansey"
+    kind  : "mob"#mob,tool,fuel
+    stage : 0
+    from  : false
+    hp    : 120
+    type  : "cs"#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power : false  # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea : 
+        name : "Scrunch"
+        damage : 0
+        cost : ["cs","cs"] #array(?) of energy types
+        desc : "Flip a coin. If heads, prevent all damage done to Chansey during your opponent's next turn. (Any other effects of attacks still happen.)"
+    moveb : false
+        name : "Double-edge"
+        damage : 80
+        cost : ["cs","cs","cs","cs"] #array(?) of energy types
+        desc : "Chansey does 80 damage to itself."
+    weak  : ["fg"]
+    resist:
+        type : "pc"
+        amnt : -30
+    retr  : ["cs"]#array(?) of energy types
+-
+    cardno: 2
+    name  : "Blastoise"
+    kind  : "mob"#mob,tool,fuel
+    stage : 2
+    from  : "Wartortle"
+    hp    : 100
+    type  : "wr"#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : "Rain Dance"
+        desc : "As often as you like during your turn (before your attack), you may attach 1 water Energy card to 1 of your water Pokémon. (This doesn't use up your 1 energy card attachment for the turn.) This power can't be used if Blastoise is Asleep, Confused, or Paralyzed."
+    movea :
+        name : "Hydro Pump"
+        damage : 40
+        cost : ["wr","wr","wr"] #array(?) of energy types
+        desc : "Does 40 damage plus 10 more damage for each Water Energy attached to Blastoise but not used to pay for this attack's Energy cost. Extra  Water Energy after the 2nd doesn't count."
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : ["lg"]
+    resist: false
+        type : ""
+        amnt : 
+    retr  : ["cs","cs","cs"]#array(?) of energy types
+-
     cardno: 4
     name  : "Charizard"
     kind  : "mob"
@@ -48,16 +100,35 @@
         type : "fg"
         amnt : -30
     retr  : ["cs","cs","cs"]
-    quote : "Spits fire that is hot enough to melt boulders.  KNown to unintentionally cuase forest fires."
-    level : 76
-    number: 6
-    desc  : "Flame Pokemon"
-    ilus  : "Mitsuhiro Arita"
-    lbs   : 200
-    ft    : 5
-    in    : 7
-    cardno: 4
 -
+    cardno: 5
+    name  : "Clefairy"
+    kind  : "mob"#mob,tool,fuel
+    stage : 0
+    from  : false
+    hp    : 40
+    type  : "cs"#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :  false # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : "Sing"
+        damage : 0
+        cost : ["cs"] #array(?) of energy types
+        desc : "Flip a coin. If heads, the Defending Pokémon is now Asleep."
+    moveb : 
+        name : "Metronome"
+        damage : 
+        cost : ["cs","cs","cs"] #array(?) of energy types
+        desc : "Choose 1 of the Defending Pokémon's attacks. Metronome copies that attack except for its Energy costs. (No matter what type the Defending Pokémon is, Clefairy's type is still Colorless.)"
+    weak  : ["fg"]
+    resist:
+        type : "pc"
+        amnt : -30
+    retr  : ["cs"]#array(?) of energy types
+
+-
+    cardno: 6
     name  : ""
     kind  : ""#mob,tool,fuel
     stage : 
@@ -70,20 +141,939 @@
     movea :
         name : ""
         damage : 
-        cost : ["fe","fe","fe","fe"] #array(?) of energy types
+        cost : ["","","",""] #array(?) of energy types
         desc : ""
     moveb : false
-    weak  : ["wr"]
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
     resist:
         type : "fg"
         amnt : -30
-    retr  : ["cs","cs","cs"]#array(?) of energy types
-    quote : ""
-    level : 
-    number: 
-    desc  : ""
-    ilus  : ""
-    lbs   : 
-    ft    : 
-    in    : 
+    retr  : ["","",""]#array(?) of energy types
+
+-
+    cardno: 7
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+-
+    cardno: 8
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+-
+    cardno: 9
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+-
+    cardno: 10
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+
+-
+    cardno: 5
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+-
+    cardno: 6
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+-
+    cardno: 7
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+-
+    cardno: 8
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+-
+    cardno: 9
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+-
+    cardno: 10
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+
+-
+    cardno: 5
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+-
+    cardno: 6
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+-
+    cardno: 7
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+-
+    cardno: 8
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+-
+    cardno: 9
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+-
+    cardno: 10
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+
+-
+    cardno: 5
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+-
+    cardno: 6
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+-
+    cardno: 7
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+-
+    cardno: 8
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+-
+    cardno: 9
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+-
+    cardno: 10
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+
+-
+    cardno: 5
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+-
+    cardno: 6
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+-
+    cardno: 7
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+-
+    cardno: 8
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+-
+    cardno: 9
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+-
+    cardno: 10
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+
+-
+    cardno: 5
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+-
+    cardno: 6
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+-
+    cardno: 7
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+-
+    cardno: 8
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+-
+    cardno: 9
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
+
+-
+    cardno: 10
+    name  : ""
+    kind  : ""#mob,tool,fuel
+    stage : 
+    from  : ""
+    hp    : 
+    type  : ""#gs,fe,wr,lg,pc,fg,cs,dk,ml
+    power :   # has children if present, or false if not
+        powername : ""
+        desc : ""
+    movea :
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    moveb : false
+        name : ""
+        damage : 
+        cost : ["","","",""] #array(?) of energy types
+        desc : ""
+    weak  : [""]
+    resist:
+        type : "fg"
+        amnt : -30
+    retr  : ["","",""]#array(?) of energy types
 
